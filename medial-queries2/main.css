@@ -1,3 +1,44 @@
 body {
   background: papayawhip;
 }
+
+.container div {
+  min-height: 100px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.a { background-color: red; }
+.b { background-color: blue; }
+.c, .d, .e { background-color: green; }
+.f { background-color: yellow; }
+
+/* Mobile styles by default */
+.a, .b, .f {
+  width: 100%;
+}
+
+.c, .d, .e {
+  width: 33.33%;
+  float: left;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .a {
+    width: 100%;
+    float: none;
+  }
+  .b {
+    width: 65%;
+    float: left;
+  }
+  .c, .d, .e {
+    width: 33.33%;
+    float: left;
+  }
+  .f {
+    width: 35%;
+    float: right;
+  }
+}

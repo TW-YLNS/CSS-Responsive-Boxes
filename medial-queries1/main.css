@@ -1,3 +1,30 @@
 body {
   background: blanchedalmond;
 }
+
+.container div {
+  min-height: 100px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.a { background-color: red; }
+.b { background-color: blue; }
+.c { background-color: green; }
+
+/* Mobile styles by default */
+.a, .b, .c {
+  width: 100%;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .a, .b {
+    width: 50%;
+    float: left;
+  }
+  .c {
+    width: 50%;
+    float: right;
+  }
+}

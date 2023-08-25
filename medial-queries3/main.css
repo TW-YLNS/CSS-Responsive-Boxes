@@ -1,3 +1,49 @@
 body {
   background: peachpuff;
 }
+
+.container div {
+  min-height: 100px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.a { background-color: red; }
+.b, .c, .d { background-color: blue; }
+.e, .f, .g { background-color: green; }
+.h { background-color: yellow; }
+
+/* Mobile styles by default */
+.a {
+  width: 100%;
+}
+
+.b, .c, .d {
+  width: 33.33%;
+  float: left;
+}
+
+.e, .f, .g {
+  width: 33.33%;
+  float: left;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .a {
+    width: 100%;
+    float: none;
+  }
+  .b, .c, .d {
+    width: 33.33%;
+    float: left;
+  }
+  .e, .f, .g {
+    width: 33.33%;
+    float: left;
+  }
+  .h {
+    width: 25%;
+    float: right;
+  }
+}
